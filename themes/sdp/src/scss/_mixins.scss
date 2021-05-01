@@ -1,0 +1,11 @@
+@mixin from($width) {
+	@media (min-width: $width + px) {
+		@content;
+	}
+}
+
+@mixin to($width) {
+	@media (max-width: $width + px) {
+		@content;
+	}
+}
