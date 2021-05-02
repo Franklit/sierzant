@@ -1,8 +1,10 @@
 //Config
-
 @import "_variables";
 @import "_mixins";
 
 
+//Global
+@import "global/_container";
 
+@import "site-footer/site-footer"
 

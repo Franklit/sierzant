@@ -19,7 +19,6 @@ function watch(){
     browserSync.init({
         proxy: 'localhost/sierzant',
 
-
     });
     gulp.watch('./src/scss/**/*.scss', style);
     gulp.watch('./*php').on('change', browserSync.reload);
