@@ -1,10 +1,18 @@
 //Config
 @import "_variables";
 @import "_mixins";
+@import "_normalize.scss";
 
 
 //Global
 @import "global/_container";
 
-@import "site-footer/site-footer"
 
+//People
+@import "people/people";
+
+//Footer
+@import "site-footer/site-footer";
+
+//Nav
+@import "site-navigation/site-nav";

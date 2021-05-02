@@ -23,32 +23,35 @@ $peopleBoxes = 'field_608e5971ca8ba';
         <?php endif;?>
             
         <?php if(have_rows($peopleBoxes)):?>
-            <?php while(have_rows($peopleBoxes)): the_row(); ?>
+            <div class="people__boxes">
+                <?php while(have_rows($peopleBoxes)): the_row(); ?>
 
-                <?php 
-                    $peopleImg = get_sub_field('field_608e5990ca8bb');
-                    $peopleName = get_sub_field('field_608e59b6ca8bc');
-                    $peoplePosition = get_sub_field('field_608e5a29ca8bd');
-                    $peopleSpecialization = get_sub_field('field_608e5a45ca8be');
-                ?>
+                    <?php 
+                        $peopleImg = get_sub_field('field_608e5990ca8bb');
+                        $peopleName = get_sub_field('field_608e59b6ca8bc');
+                        $peoplePosition = get_sub_field('field_608e5a29ca8bd');
+                        $peopleSpecialization = get_sub_field('field_608e5a45ca8be');
+                    ?>
 
-                <div class="people__personBox">
-                    <?php if($peopleImg):?>
-                        <?php echo wp_get_attachment_image($peopleImg, 'large', false, ['class' => 'people__img']);?>
-                    <?php endif;?>
-                    <?php if($peopleName):?>
-                        <h4 class="peopleName"><?php echo esc_html($peopleName);?></h4>
-                    <?php endif;?>
-                    <?php if($peoplePosition):?>
-                        <p class="peoplePosition"><?php echo esc_html($peoplePosition);?></p>
-                    <?php endif;?>
-                    <?php if($peopleSpecialization):?>
-                        <p class="peopleSpecialization"><?php echo esc_html($peopleSpecialization);?></p>
-                    <?php endif;?>
-                </div>
+                    <a href="#" class="people__personBox">
+                        <?php if($peopleImg):?>
+                            <?php echo wp_get_attachment_image($peopleImg, 'large', false, ['class' => 'people__img']);?>
+                        <?php endif;?>
+                        <div class="people__description">
+                            <?php if($peopleName):?>
+                                <h4 class="peopleName"><?php echo esc_html($peopleName);?></h4>
+                            <?php endif;?>
+                            <?php if($peoplePosition):?>
+                                <p class="peoplePosition"><?php echo esc_html($peoplePosition);?></p>
+                            <?php endif;?>
+                            <?php if($peopleSpecialization):?>
+                                <p class="peopleSpecialization"><?php echo esc_html($peopleSpecialization);?></p>
+                            <?php endif;?>
+                        </div>
+                    </a>
 
-            <?php endwhile;?>
-
+                <?php endwhile;?>
+            </div>            
         <?php endif; ?>
     
     </div>
