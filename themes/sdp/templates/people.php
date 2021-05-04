@@ -12,53 +12,42 @@ $peopleBoxes = 'field_608e5971ca8ba';
 
 
 
+
+<?php 
+
+$people = get_field('field_6091534b8202b');
+
+
+
+?>
+
+
+
 <section class="people">
     <div class="people__container g-container">
-    
-        <?php if($peopleHeading) :?>
-            <h2 class="people__heading"> <?php echo esc_html($peopleHeading);?></h2>
-        <?php endif;?>
-        <?php if($peopleUnderHeading):?>
-            <p class="people__underHeading"><?php echo esc_html($peopleUnderHeading);?></p>
-        <?php endif;?>
-            
-        <?php if(have_rows($peopleBoxes)):?>
-            <div class="people__boxes">
-                <?php while(have_rows($peopleBoxes)): the_row(); ?>
+        <div class="people__boxes">
+<?php foreach($people as $person): ?>
 
-                    <?php 
-                        $peopleImg = get_sub_field('field_608e5990ca8bb');
-                        $peopleName = get_sub_field('field_608e59b6ca8bc');
-                        $peoplePosition = get_sub_field('field_608e5a29ca8bd');
-                        $peopleSpecialization = get_sub_field('field_608e5a45ca8be');
-                    ?>
+    <?php 
+        $position = get_field('field_608e914edfe46', $person->ID );    
+    ?>
+        <a href="#" class="people__personBox">
+            <img src="<?php echo get_the_post_thumbnail_url($person->ID);?>" alt="" class="people__img">
+            <div class="people__description">
 
-                    <a href="#" class="people__personBox">
-                        <?php if($peopleImg):?>
-                            <?php echo wp_get_attachment_image($peopleImg, 'large', false, ['class' => 'people__img']);?>
-                        <?php endif;?>
-                        <div class="people__description">
-                            <?php if($peopleName):?>
-                                <h4 class="peopleName"><?php echo esc_html($peopleName);?></h4>
-                            <?php endif;?>
-                            <?php if($peoplePosition):?>
-                                <p class="peoplePosition"><?php echo esc_html($peoplePosition);?></p>
-                            <?php endif;?>
-                            <?php if($peopleSpecialization):?>
-                                <p class="peopleSpecialization"><?php echo esc_html($peopleSpecialization);?></p>
-                            <?php endif;?>
-                        </div>
-                    </a>
+                <h4 class="peopleName"><?php echo $person-> post_title;?></h4>
 
-                <?php endwhile;?>
-            </div>            
-        <?php endif; ?>
-    
+                <p class="peoplePosition"><?php echo $position;?></p>
+
+            </div>
+
+        </a>
+        <?php endforeach;?>
     </div>
 
-</section>
-
-
+</div>
+ 
+ </section>
 
 
 

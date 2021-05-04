@@ -19,7 +19,6 @@ function awesome_script_enqueue() {
 
 
 
-
 function team_members(){
     
     $args = array(

@@ -330,7 +330,7 @@ template {
   justify-content: center; }
 
 .people__personBox {
-  color: #e40000;
+  color: pink;
   text-decoration: none;
   position: relative;
   height: 200px;
@@ -412,8 +412,26 @@ template {
     .peopleSpecialization {
       font-size: 30px; } }
 
-body {
-  display: none; }
+.person__top {
+  display: flex;
+  justify-content: space-around; }
+
+.person__details {
+  display: flex;
+  flex-direction: column; }
+
+.person__image {
+  width: 300px;
+  height: auto; }
+
+.person__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .person__description p {
+    width: 600px; }
+  .person__description ul {
+    width: 600px; }
 
 footer {
   width: 100%;

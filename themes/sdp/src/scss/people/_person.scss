@@ -1,0 +1,27 @@
+.person__top{
+    display: flex;
+    justify-content: space-around;
+}
+
+.person__details{
+    display: flex;
+    flex-direction: column;
+}
+
+.person__image{
+    width: 300px;
+    height: auto;
+}
+
+.person__description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p{
+        width: 600px;
+    }
+    ul{
+        width: 600px;
+    }
+}
