@@ -38,7 +38,8 @@ function create_menu() {
 
     array(
         'navigation-menu' => __( 'Menu górne' ),
-        'footer-menu' => __( 'Footer Menu' )
+        'footer-menu' => __( 'Footer Menu' ),
+        // 'mobile-menu' => __( 'Mobile Menu' ),
 
     ) 
     );
