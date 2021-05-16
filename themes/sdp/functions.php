@@ -21,8 +21,8 @@ get_template_part('template-parts/functions/cp-members');
 //Custom post type-Specialization
 get_template_part('template-parts/functions/cp-specialization');
 
-//Widget menu categories
-get_template_part('template-parts/functions/widget-menu-category');
+// //Widget menu categories
+// get_template_part('template-parts/functions/widget-menu-category');
 
 
 
@@ -68,8 +68,10 @@ add_action('widgets_init', 'my_sidebars');
 
 
 
-if( !defined(THEME_IMG_PATH)){
-    define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/template-parts/img' );
-   }
+// if( !defined(THEME_IMG_PATH)){
+//     define( 'THEME_IMG_PATH', get_stylesheet_directory_uri() . '/template-parts/img' );
+//    }
+
+
 
 ?>

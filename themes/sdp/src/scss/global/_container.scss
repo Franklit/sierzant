@@ -7,3 +7,24 @@
 	margin-right: auto;
 }
 
+
+
+.g-button{
+	display: inline-flex;
+	border-radius: 999px;
+	align-items: center;
+	height: 50px;
+	background-color:$orangeColor;
+	padding: 22px 30px 20px;
+	color: $whiteColor;
+}
+
+
+
+h1,h2{
+	font-family: $fontBig;
+}
+
+p,a{
+	font-family: $fontSmall;
+}

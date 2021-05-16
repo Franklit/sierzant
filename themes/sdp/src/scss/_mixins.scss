@@ -9,3 +9,35 @@
 		@content;
 	}
 }
+
+
+@mixin header{
+	font-size: 30px;
+
+	@include from(800){
+		font-size: 45px;
+	}
+
+	@include from(1200){
+		font-size: 60px;
+	}
+}
+
+@mixin smallHeader{
+	font-size: 20px;
+	@include from(800){
+		font-size: 30px;
+	}
+
+	@include from(1200){
+		font-size: 40px;
+	}
+}
+
+@mixin text{
+	font-size: 17px;
+
+	@include  from(800){
+		font-size: 20px;
+	}
+}

@@ -1,0 +1,143 @@
+.page-top{
+    .g-container{
+        padding-left: 0;
+        padding-right: 0;
+
+        @include from(600){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+
+.page-top__container{
+
+}
+
+.page-top__innerContainer{
+    position: relative;
+    overflow: hidden;
+
+    // height: calc(100vh - 120px);
+    
+    @include from(900){
+        // display: flex;
+        // justify-content: space-around;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100px;
+        background-color: $orangeColor;
+        bottom: 0;
+    }  
+
+    &::after{
+        position: absolute;
+        content: '';
+        display: none;
+
+        @include from(1200){
+            display: initial;
+            width: 200px;
+            height: 500px;
+            background-color: $orangeColor;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+.page-top__content{
+    // position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 0 20px;
+    max-width: 400px;
+    margin-bottom: 200px;
+
+    @include from(800){
+        margin-bottom: 400px;
+    }
+
+    @include from(900){
+        // position: static;
+        padding: 40px 70px;
+        max-width: 700px;
+        margin-bottom: 300px;
+    }
+}
+
+
+.page-top__imgContainer{
+    // position: relative;
+    // width: 100px;
+    // overflow: hidden;
+}
+    
+
+
+
+
+.page-top__image{
+    
+    position: absolute;
+    right: 0px;
+    bottom: 100px;
+    z-index: 1;
+    opacity: .2;
+    
+
+    @include from(900){
+        // position: static;
+        right: 100px;
+        // opacity: 1;
+    }
+    @include from(1200){
+        opacity: 1;
+    }
+
+
+
+
+
+    width: 350px;
+    height: auto;
+
+    @include from(800){
+        width: 450px;
+    }
+}
+
+.page-top__heading{
+    margin-bottom: 0;
+    @include header;
+
+}
+
+.page-top__subheading{
+    margin-top: 0;
+    @include smallHeader;
+    margin-bottom: 200px;
+
+    @include from(800){
+        margin-bottom: 0px;
+    }
+}
+
+.page-top__description{
+    @include text;
+    // @include from(400){
+    //     padding-right: 50px;
+    // }
+}
+
+.page-top__button{
+    margin-top: 20px;
+}
