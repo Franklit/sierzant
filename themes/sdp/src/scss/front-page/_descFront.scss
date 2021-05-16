@@ -1,0 +1,31 @@
+.front-desc{
+
+}
+
+
+
+
+.front-desc__list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    padding-left: 0;
+
+    @include from(600){
+        flex-direction: row;
+    }
+}
+
+.front-desc__listItem{
+    width: 100%;
+    padding-right: 40px;
+    padding-top: 20px;
+    @include from(600){
+        width: 50%;
+        padding-top: 30px;
+    }
+}
+
+
+

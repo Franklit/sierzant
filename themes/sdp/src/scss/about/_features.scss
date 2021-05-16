@@ -1,0 +1,33 @@
+.aboutus-features__container{
+    
+}
+
+.aboutus-features__heading{
+    text-align: center;
+}
+
+.aboutus-features__boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // justify-content: center;
+}
+
+.aboutus-features__box{
+    position: relative;
+    width: 100%;
+    @include from(600){
+        width: 30%;
+    }
+}
+
+
+.aboutus-features__img{
+    position: absolute;
+    width: 50px;
+    height: auto;
+}
+
+.aboutus-features__title{
+    text-align: center;
+}

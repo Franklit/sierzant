@@ -572,7 +572,6 @@ footer {
   height: 30px; }
 
 .container {
-  height: 100vh;
   background-color: #202020; }
 
 .hamburger {
@@ -769,3 +768,53 @@ footer {
 
 .page-top__button {
   margin-top: 20px; }
+
+.front-desc__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  padding-left: 0; }
+  @media (min-width: 600px) {
+    .front-desc__list {
+      flex-direction: row; } }
+
+.front-desc__listItem {
+  width: 100%;
+  padding-right: 40px;
+  padding-top: 20px; }
+  @media (min-width: 600px) {
+    .front-desc__listItem {
+      width: 50%;
+      padding-top: 30px; } }
+
+.aboutus-features__heading {
+  text-align: center; }
+
+.aboutus-features__boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.aboutus-features__box {
+  position: relative;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .aboutus-features__box {
+      width: 30%; } }
+
+.aboutus-features__img {
+  position: absolute;
+  width: 50px;
+  height: auto; }
+
+.aboutus-features__title {
+  text-align: center; }
+
+@media (min-width: 600px) {
+  .aboutus-whywe__container {
+    display: flex; } }
+
+.aboutus-whywe__img {
+  width: 400px;
+  height: auto; }
