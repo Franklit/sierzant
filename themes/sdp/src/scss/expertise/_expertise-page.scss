@@ -1,0 +1,15 @@
+.expertise__boxes{
+
+    @include from(600){
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.expertise__box{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: gray;
+}

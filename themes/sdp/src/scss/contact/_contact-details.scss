@@ -1,0 +1,41 @@
+.contact__container{
+    // display: flex;
+}
+
+
+.contact__heading{
+    text-align: center;
+}
+
+.contact__decription{
+    text-align: center;
+}
+
+
+
+.contact__details{
+
+    @include from(600){
+        display: flex;  
+        justify-content: center;      
+    }
+}
+
+.contact__img{
+    width: 500px;
+    height: auto;
+}
+
+.contact__details-description{
+    @include from(600){
+        margin-left: 50px;
+    }
+}
+
+.contact__formular{
+    width: 400px;
+    margin: 0 auto;
+}
+
+
+

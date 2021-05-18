@@ -6,6 +6,7 @@
 
 <section class="aboutus-whywe">
     <div class="aboutus-whywe__container g-container">
+        
         <div class="aboutus-whywe__description">
             <?php the_content();?>
         </div>

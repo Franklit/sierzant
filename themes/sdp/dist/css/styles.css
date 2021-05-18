@@ -331,6 +331,12 @@ h1, h2 {
 p, a {
   font-family: "Roboto", sans-serif; }
 
+.top-image-g {
+  width: 100%;
+  min-width: 1600px;
+  height: auto;
+  margin-top: -700px; }
+
 .people__heading {
   width: 100%;
   text-align: center; }
@@ -818,3 +824,37 @@ footer {
 .aboutus-whywe__img {
   width: 400px;
   height: auto; }
+
+.contact__heading {
+  text-align: center; }
+
+.contact__decription {
+  text-align: center; }
+
+@media (min-width: 600px) {
+  .contact__details {
+    display: flex;
+    justify-content: center; } }
+
+.contact__img {
+  width: 500px;
+  height: auto; }
+
+@media (min-width: 600px) {
+  .contact__details-description {
+    margin-left: 50px; } }
+
+.contact__formular {
+  width: 400px;
+  margin: 0 auto; }
+
+@media (min-width: 600px) {
+  .expertise__boxes {
+    display: flex;
+    justify-content: space-between; } }
+
+.expertise__box {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: gray; }

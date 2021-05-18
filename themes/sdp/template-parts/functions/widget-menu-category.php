@@ -48,6 +48,7 @@ class wpb_widget extends WP_Widget {
                 endwhile;
                 echo '</div>';
             }
+            wp_reset_postdata();
         }
     }
 

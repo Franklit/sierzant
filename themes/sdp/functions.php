@@ -22,7 +22,7 @@ get_template_part('template-parts/functions/cp-members');
 get_template_part('template-parts/functions/cp-specialization');
 
 // //Widget menu categories
-// get_template_part('template-parts/functions/widget-menu-category');
+get_template_part('template-parts/functions/widget-menu-category');
 
 
 
