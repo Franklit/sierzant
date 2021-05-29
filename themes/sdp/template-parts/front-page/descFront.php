@@ -1,9 +1,9 @@
 <?php 
-    $headingDesc = get_field('field_60a162eada045');
+    $headingDesc = get_field('field_60ad181aef8ef');
     $theContent = get_the_content();
-    $textAboveList = get_field('field_6093eb2b8949e');
-    $list = 'field_6093eb508949f';
-    $textUnderList = get_field('field_6093eb73894a1');
+    $textAboveList = get_field('field_60ad1832ef8f0');
+    $list = 'field_60ad184bef8f1';
+    $textUnderList = get_field('field_60ad1860ef8f2');
 ?>
 
 <section class="front-desc g-container">
@@ -30,7 +30,7 @@
                 <ul class="front-desc__list">
                         <?php while(have_rows($list)): the_row();?>
                         <?php 
-                                $listItem = get_sub_field('field_6093eb64894a0');
+                                $listItem = get_sub_field('field_60ad187def8f3');
                         ?>
                                 <li class="front-desc__listItem">
                                         <?php echo esc_html($listItem);?>

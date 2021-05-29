@@ -17,7 +17,7 @@ function style() {
 
 function watch(){
     browserSync.init({
-        proxy: 'localhost/sierzant',
+        proxy: 'localhost/sdp',
 
     });
     gulp.watch('./src/scss/**/*.scss', style);

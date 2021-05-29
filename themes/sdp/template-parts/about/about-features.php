@@ -1,7 +1,7 @@
 <?php 
 
-$headingAbout = get_field('field_60a1711a16ddf');
-$featuresAbout = 'field_60a1716b16de0';
+$headingAbout = get_field('field_60ad1aeff8d1d');
+$featuresAbout = 'field_60ad1b14f8d1e';
 
 
 
@@ -17,9 +17,9 @@ $featuresAbout = 'field_60a1716b16de0';
             <?php while(have_rows($featuresAbout)): the_row();?>
                 <div class="aboutus-features__box">
                 <?php 
-                    $img = get_sub_field('field_60a1718016de1');
-                    $title = get_sub_field('field_60a171a816de2');
-                    $text = get_sub_field('field_60a171ae16de3');
+                    $img = get_sub_field('field_60ad1b23f8d1f');
+                    $title = get_sub_field('field_60ad1b42f8d20');
+                    $text = get_sub_field('field_60ad1b48f8d21');
                 ?>
                 <?php if ($img) : ?>
                     <?php echo wp_get_attachment_image($img, 'large', false, ['class' => 'aboutus-features__img']); ?>
@@ -36,9 +36,6 @@ $featuresAbout = 'field_60a1716b16de0';
         </div>
 
     <?php endif;?>
-
-
-
 
 
   </div>

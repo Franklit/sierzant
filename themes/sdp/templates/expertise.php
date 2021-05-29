@@ -2,9 +2,9 @@
 /* Template Name: Expertise */
 get_header();
 
-$expertiseHeading = get_field('field_60a2a376c9bc4');
-$expertiseImageTop = get_field('field_60a2a367c9bc3');
-$expertiseDescription = get_field('field_60a2a7cb0a60e');
+$expertiseHeading = get_field('field_60ad192a164c7');
+$expertiseImageTop = get_field('field_60ad1934164c8');
+$expertiseDescription = get_field('field_60ad1954164c9');
 ?>
 
 

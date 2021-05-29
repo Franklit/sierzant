@@ -8,14 +8,14 @@ get_header();
 
 <?php 
 
-    $contacHeading = get_field('field_60a287c052fcf');
-    $contactDescription = get_field('field_60a287e052fd0');
-    $contactImg = get_field('field_60a287ef52fd1');
-    $contactDetails = get_field('field_60a2880452fd2');
-    $formularHeding = get_field('field_60a2882052fd3');
+    $contacHeading = get_field('field_60ad1e7298578');
+    $contactDescription = get_field('field_60ad1e7a98579');
+    $contactImg = get_field('field_60ad1e849857a');
+    $contactDetails = get_field('field_60ad1e8b9857b');
+    $formularHeding = get_field('field_60ad1ea19857c');
 
 
-    $contactTopImg = get_field('field_60a28fefbf454');
+    $contactTopImg = get_field('field_60ad1eb19857d');
 ?>
 
 
@@ -49,7 +49,7 @@ get_header();
     <div class="contact__formular">
         <?php if($formularHeding): ?>
             <h2 class="contact__forumlar-heading"><?php echo esc_html($formularHeding);?></h2>
-            <?php echo do_shortcode('[contact-form-7 id="196" title="Contact"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="7" title="Contact form 1"]'); ?>
         <?php endif;?>
     </div>
 </section>

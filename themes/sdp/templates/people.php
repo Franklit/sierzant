@@ -3,12 +3,10 @@
 /* Template Name: People */
 get_header();
 
-$peopleHeading = get_field('field_608e5916ca8b8');
-$peopleUnderHeading = get_field('field_608e5957ca8b9');
-$peopleBoxes = 'field_608e5971ca8ba';
-$people = get_field('field_6091534b8202b');
-$peopleHeading = get_field('field_608e5916ca8b8');
-$peopleHeadingUnder = get_field('field_608e5916ca8b8');
+$peopleHeading = get_field('field_60ad22159731f');
+// $peopleBoxes = 'field_608e5971ca8ba';
+$people = get_field('field_60ad228397321');
+$peopleHeadingUnder = get_field('field_60ad221d97320');
 
 ?>
 
@@ -25,8 +23,8 @@ $peopleHeadingUnder = get_field('field_608e5916ca8b8');
 
             <?php foreach($people as $person): ?>
                 <?php 
-                    $position = get_field('field_608e914edfe46', $person->ID ); 
-                    $specialty = get_field('field_60917c53dc02f', $person->ID);
+                    $position = get_field('field_60ad206c8f0be', $person->ID ); 
+                    $specialty = get_field('field_60ad23773ea05', $person->ID);
                 ?>
                     <a href="<?php echo esc_url(get_page_link($person->ID)); ?>" class="people__personBox">
                         <img src="<?php echo esc_url(get_the_post_thumbnail_url($person->ID));?>" alt="" class="people__img">

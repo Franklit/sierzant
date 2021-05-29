@@ -1,8 +1,9 @@
 <?php 
-$heading = get_field('field_609d48c7f3fed');
-$subheading = get_field('field_609d48d3f3fee');
-$description = get_field('field_609d48def3fef');
-$img = get_field('field_609d48f1f3ff0');
+
+$heading = get_field('field_60ad176810c65');
+$subheading = get_field('field_60ad177710c66');
+$description = get_field('field_60ad177d10c67');
+$img = get_field('field_60ad178510c68');
 
 ?>
 

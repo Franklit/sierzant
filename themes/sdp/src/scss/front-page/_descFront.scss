@@ -11,10 +11,17 @@
     flex-wrap: wrap;
     margin-left: 20px;
     padding-left: 0;
+    font-family: $fontSmall;
+
 
     @include from(600){
         flex-direction: row;
     }
+}
+
+.front-desc__heading{
+    margin-top: 90px;
+
 }
 
 .front-desc__listItem{
@@ -25,7 +32,27 @@
         width: 50%;
         padding-top: 30px;
     }
+    // list-style-image: url('../../template-parts/img/marker.jpg');
+    // list-style-position: inside;
+    list-style-type: none;
+    position: relative;
+
+    &::before{
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-image: url('../../template-parts/img/marker.jpg');
+        background-size: 30px 30px;
+        position: absolute;
+        left: -40px;
+    }
+}
+
+.front-desc__textAfterList{
+    margin-top: 90px;
 }
 
 
-
+.front-desc__content {
+    margin-bottom: 100px;
+}

@@ -7,7 +7,7 @@ get_header();
 
 
 <?php 
-$img_about = get_field('field_60a28235624df');
+$img_about = get_field('field_60ad1adb09ab6');
 
 
 ?>

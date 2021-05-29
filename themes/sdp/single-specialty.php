@@ -1,14 +1,10 @@
 <?php 
 get_header();
  
-    $specialization = 'field_6092bc85e7246';
-
-    $personContact = get_field('field_60a2a8d634c7f');
+    $specialization = 'field_60ad2e0d3b762';
+    $personContact = get_field('field_60ad2e6c3b764');
 
 ?>
-
-
-
 
 
 
@@ -25,7 +21,7 @@ get_header();
                 <?php if(have_rows($specialization)): ?>
                     <ul class="single-specialty__ul">
                     <?php while(have_rows($specialization)): the_row();?>
-                        <?php     $specializationItem = get_sub_field('field_6092bca6e7247');?>
+                        <?php     $specializationItem = get_sub_field('field_60ad2e403b763');?>
 
                         <li class="single-specialty__li"><?php echo $specializationItem; ?></li>
                     <?php endwhile;?>
@@ -38,8 +34,8 @@ get_header();
                         <?php 
                         
                             $name = get_the_title($person->ID ); 
-                            $position = get_field('field_608e914edfe46', $person->ID);
-                            $personImg = get_field('field_608e98cce77d3', $person->ID);
+                            $position = get_field('field_60ad206c8f0be', $person->ID);
+                            $personImg = get_field('field_60ad20728f0bf', $person->ID);
                         ?>
 
 

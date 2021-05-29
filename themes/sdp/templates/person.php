@@ -1,9 +1,9 @@
 <?php
-$personName = get_field('field_608e90e87dd6e');
-$personPosition = get_field('field_608e914edfe46');
-$personImage = get_field('field_608e98cce77d3');
+$personName = get_field('field_60ad205e8f0bd');
+$personPosition = get_field('field_60ad206c8f0be');
+$personImage = get_field('field_60ad20728f0bf');
 
-$personRepeater = 'field_608e92bedfe49';
+$personRepeater = 'field_60ad20878f0c0';
 ?>
 
 
@@ -29,9 +29,9 @@ $personRepeater = 'field_608e92bedfe49';
             <div class="person__description">
                     <?php while(have_rows($personRepeater)): the_row(); ?>
                         <?php 
-                            $personTitle = get_sub_field('field_608e92dddfe4a');
-                            $personDescription = get_sub_field('field_608e931adfe4c');
-                            $personIcon = get_sub_field('field_608e92fcdfe4b');
+                            $personTitle = get_sub_field('field_60ad20cc8f0c1');
+                            $personDescription = get_sub_field('field_60ad20d38f0c2');
+                            $personIcon = get_sub_field('field_60ad20da8f0c3');
                         ?>
 
                         <?php if ($personIcon) : ?>

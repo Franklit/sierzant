@@ -10,7 +10,7 @@ get_template_part('template-parts/head');
  
 <header class="site-header">
         <a href="<?php echo home_url();?>">
-        <img src="http://localhost/sierzant/wp-content/uploads/2021/05/LOGO_SDP_short_dark.jpg" alt="" class="site-header__img">
+        <img src="http://localhost/sdp/wp-content/uploads/2021/05/LOGO_SDP_short_dark.jpg" alt="" class="site-header__img">
         </a>
         <nav class="navigation-menu">
             <?php get_template_part('template-parts/site-header/site-nav'); ?>
