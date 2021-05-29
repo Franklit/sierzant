@@ -47,7 +47,10 @@ $expertiseDescription = get_field('field_60ad1954164c9');
                             echo '<a href="'.get_term_link($custom_term).'" class="expertise__box-title">'.$custom_term->name. '</a>';
                     
                             while($loop->have_posts()) : $loop->the_post();
+                            echo '<div class="expertise__box-item-container">';
                                 echo '<a href="'.get_permalink().'" class="expertise__box-item">'.get_the_title().'</a>';
+                                echo '<span class="expertise__box-item-arrow"><span class="expertise__box-item-arrow-icon"></span></span>';
+                            echo '</div>';
                             endwhile;
                             echo '</div>';
                         }

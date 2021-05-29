@@ -9,10 +9,11 @@ wp_nav_menu( array(
 
 
 
+<?php if(!is_page_template('templates/expertise.php')):?>
+    <div class="navigation-menu__mega-menu navigation-menu__mega-menu--hover">
+        <?php if( is_active_sidebar('page-sidebar')): ?>
+            <?php dynamic_sidebar('page-sidebar');?>
+        <?php endif;?>
+    </div>
 
-<div class="navigation-menu__mega-menu navigation-menu__mega-menu--hover">
-    <?php if( is_active_sidebar('page-sidebar')): ?>
-        <?php dynamic_sidebar('page-sidebar');?>
-    <?php endif;?>
-</div>
-
+<?php endif;?>

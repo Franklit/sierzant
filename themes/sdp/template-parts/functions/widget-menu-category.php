@@ -41,11 +41,18 @@ class wpb_widget extends WP_Widget {
         $loop = new WP_Query($args);
             if($loop->have_posts()) {
                 echo '<div class="navigation-menu__category">';
+                echo '<div class="navigation-menu__box">';
                 echo '<a href="'.get_term_link($custom_term).'" class="navigation-menu__category-title">'.$custom_term->name. '</a>';
+                
+
         
                 while($loop->have_posts()) : $loop->the_post();
+                    echo '<div class="navigation-menu__box-item-container">';
                     echo '<a href="'.get_permalink().'" class="navigation-menu__category-item">'.get_the_title().'</a>';
+                    echo '<span class="navigation-menu-item-arrow"><span class="navigation-menu__box-item-arrow-icon"></span></span>';
+                    echo '</div>';
                 endwhile;
+                echo '</div>';
                 echo '</div>';
             }
             wp_reset_postdata();
