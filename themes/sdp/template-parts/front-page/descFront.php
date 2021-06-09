@@ -6,7 +6,7 @@
     $textUnderList = get_field('field_60ad1860ef8f2');
 ?>
 
-<section class="front-desc g-container">
+<section class="front-desc g-small-container">
 
     <div class="front-desc__content ">
 

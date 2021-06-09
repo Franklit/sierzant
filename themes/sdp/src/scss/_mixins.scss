@@ -41,3 +41,49 @@
 		font-size: 20px;
 	}
 }
+
+@mixin heading{
+	font-family: $fontBig;
+	font-size: 30px;
+	margin: 0;
+
+	@include from(600){
+		font-size: 45px;
+	}
+
+	@include from(1000){
+		font-size: 60px;
+	}
+}
+
+@mixin smallHeading{
+	font-family: $fontBig;
+	font-size: 25px;
+
+	@include from(600){
+		font-size: 35px;
+	}
+
+	@include from(1000){
+		font-size: 45px;
+	}
+}
+
+@mixin underHeading{
+	font-family: $fontSmall;
+	font-size: 17px;
+
+	@include from(600){
+		font-size: 20px;
+	}
+	margin-top: 15px;
+}
+
+@mixin smallLine($width){
+	content: '';
+	position: absolute;
+	display: block;
+	width: $width;
+	height: 1px;
+	background-color: $grayColor;
+}

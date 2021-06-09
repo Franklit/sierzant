@@ -1,14 +1,22 @@
 .contact__container{
     // display: flex;
+    position: relative;
 }
 
 
 .contact__heading{
     text-align: center;
+    position: absolute;
+    left: 10%;
+    top: 100px;
+
 }
 
 .contact__decription{
     text-align: center;
+    position: absolute;
+    left: 10%;
+    top: 70px;
 }
 
 
@@ -22,8 +30,10 @@
 }
 
 .contact__img{
-    width: 500px;
-    height: auto;
+    width: 100%;
+    height: 500px;
+    // height: auto;
+    opacity: .2;
 }
 
 .contact__details-description{

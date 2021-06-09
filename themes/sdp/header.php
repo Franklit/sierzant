@@ -1,17 +1,23 @@
 <?php 
 get_template_part('template-parts/head');
 
+$logoHeader = get_field('field_60b89a3893cd3', 'option')
+
 ?>
 
 <body>
 
 <div class="site-container">
 
- 
+
 
 <header class="site-header">
         <a href="<?php echo home_url();?>">
-        <img src="http://localhost/sdp/wp-content/uploads/2021/05/LOGO_SDP_short_dark.jpg" alt="" class="site-header__img">
+
+        
+        <?php if ($logoHeader) : ?>
+            <?php echo wp_get_attachment_image($logoHeader, 'large', false, ['class' => 'site-header__img']); ?>
+        <?php endif; ?>
         </a>
         <?php if(!is_page_template('templates/expertise.php')):?>
         <nav class="navigation-menu">

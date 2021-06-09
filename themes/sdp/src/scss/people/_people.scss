@@ -1,10 +1,19 @@
 .people__heading{
     width: 100%;
     text-align: center;
+    position: relative;
+    @include heading;
+
+    &::after{
+        @include smallLine(20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 .people__underHeading{
     width: 100%;
     text-align: center;
+    @include underHeading;
 }
 
 .people__boxes{
@@ -18,7 +27,7 @@
 }
 
 .people__personBox{
-    color: pink;
+    color: $orangeColor;
     text-decoration: none;
     position: relative;
     height: 200px;
@@ -81,6 +90,7 @@
 
 .peopleName{
     font-size: 25px;
+    font-family: $fontBig;
     @include from(370){
         font-size: 35px;
     }
@@ -91,6 +101,7 @@
 
 .peoplePosition{
     font-size: 15px;
+    font-family: $fontSmall;
     margin-bottom: 0;
     margin-top: 0;
     @include from(370){
@@ -103,6 +114,7 @@
 
 .peopleSpecialization{
     font-size: 15px;
+    font-family: $fontSmall;
     margin-top: 0;
     margin-bottom: 0;
     @include from(370){

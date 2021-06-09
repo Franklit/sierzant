@@ -27,7 +27,7 @@ class wpb_widget extends WP_Widget {
     foreach($custom_terms as $custom_term) {
         wp_reset_query();
         $args = array('post_type' => 'specialty',
-            'posts_per_page' => 3,
+            // 'posts_per_page' => 3,
             
             'tax_query' => array(
                 array(

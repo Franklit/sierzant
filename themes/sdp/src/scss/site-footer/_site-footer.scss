@@ -54,16 +54,27 @@ footer{
 }
 
 .footer_img{
-    width: 500px;
+    width: 270px;
+    margin-left: 80px;
     height: auto;
 }
+
+.footer__bottom{
+    display: flex;
+    align-items: center;
+}
+
+.footer__allrights{
+    color: #e8e8e8;;
+}
+
 
 .beforefooter{
     width: 100%;
     height: auto;
     padding: 30px 0;
     // height: 200px;
-    background-color: $orangeColor;
+    // background-color: $orangeColor;
     display: flex;
     justify-content: center;
 }
@@ -93,9 +104,16 @@ footer{
 }
 
 .beforefooter__heading{
-    font-size: 40px;
-    // margin: 20px 0 0 0 ;
-    margin: 0;
+    @include smallHeading;
+    position: relative;
+
+  &::after{
+        @include smallLine(20px);
+        left: 50%;
+        transform: translateX(-50%);
+        // background-color: rgb(133, 122, 122);
+    }
+    
 }
 
 .beforefooter__text{
@@ -104,7 +122,6 @@ footer{
 }
 
 .beforefooter__button{
-    // margin-top: 20px;
     margin-bottom: 20px;
     background-color: red;
 

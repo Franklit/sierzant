@@ -14,7 +14,8 @@
         $textButtonAboveFooterContact = get_field('field_60b2150efd762');
         $linkButtonAboveFooterContact = get_field('field_60b2153586dfc');
 
-
+        $logoFooter= get_field('field_60b89a6d93cd6', 'option');
+        $allrights = get_field('field_60b89a7c93cd7', 'option');
 
 
 
@@ -60,9 +61,7 @@
                             <?php echo $adres;?>
                         </div>
                     <?php endif;?>
-                    <div class="social__media">
-                        trzy ikonki
-                    </div>
+           
                 </div>
                 <div class="footer__bigfoto">
 
@@ -70,7 +69,12 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <img src="http://localhost/sdp/wp-content/uploads/2021/05/Block.one-Homepage.jpg" alt="" class="footer_img">
+            <?php if ($logoFooter) : ?>
+                <?php echo wp_get_attachment_image($logoFooter, 'large', false, ['class' => 'footer_img']); ?>
+            <?php endif; ?>
+            <?php if($allrights):?>
+                <p class="footer__allrights"><?php echo esc_html($allrights)?></p>
+            <?php endif;?>
             </div>
     </footer>
     </div>

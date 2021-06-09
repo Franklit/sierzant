@@ -1,17 +1,26 @@
 
 .expertise__heading{
     text-align: center;
+    position: relative;
+    @include heading;
+
+    &::after{
+        @include smallLine(20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .expertise__description{
     text-align: center;
+    @include underHeading;
 }
 
 
 
 .expertise__boxes{
-   margin-top: 100px;
-   margin-bottom: 100px;
+   margin-top: 50px;
+   margin-bottom: 50px;
     @include from(600){
         display: flex;
         justify-content: space-between;
@@ -25,15 +34,16 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 33%;
     // background-color: gray;
 }
 
 .expertise__box-title{
     pointer-events: none;
     font-size: 40px;
-    border-bottom: 1px solid $orangeColor;
-    color: white;
+    // border-bottom: 1px solid $orangeColor;
+    color: $orangeColor;
+    text-align: left;
 }
 
 .expertise__box-item-container{
@@ -41,6 +51,17 @@
     justify-content: left;
     transition: 1s all;
     position: relative;
+    overflow: hidden;
+    // margin-top: 20px;
+
+    &:hover{
+        .expertise__box-item{
+            padding-left: 15px;
+            border-left: 1px solid $orangeColor;
+            border-right: 1px solid $orangeColor;
+            background-color: $orangeColor;
+        }
+    }
 
 
 }
@@ -50,26 +71,34 @@
     font-size: 20px;
     color: white;
     flex-shrink: 0;
-    max-width: 70%;
+    // max-width: 70%;
+    width: 85%;
+    // transition: .5s background-color ease-in-out;
+    transition: .2s padding-left ease-in-out;
+    border-top: 1px solid $orangeColor;
+    padding: 10px 0;
+    
     
 
 
     &:hover + .expertise__box-item-arrow{
         .expertise__box-item-arrow-icon{
-            background-position: right;
+            // background-position: right;
+            left: 90%;
         }
     
     }
 }
 
 .expertise__box-item-arrow{
-    margin-left: 20px;
+    // margin-left: 20px;
+    // margin: 20px 0 0 20px;
     float: left;
     height: 100%;
     display: flex;
     align-items: center;
-    transition: 1s;
-    width: 100%;
+    // transition: 1s;
+    // width: 100%;
 }
 
 .expertise__box-item-arrow-icon{
@@ -79,6 +108,10 @@
     background-image: url('../../template-parts/svg/right.svg');
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    transition: 1s;
+    transition: .1s ease-in-out;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
 
 }

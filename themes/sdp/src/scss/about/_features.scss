@@ -4,30 +4,82 @@
 
 .aboutus-features__heading{
     text-align: center;
+    @include smallHeading; 
+    position: relative;
+
+    &::after{
+        @include smallLine(20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 }
 
 .aboutus-features__boxes{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     // justify-content: center;
 }
 
 .aboutus-features__box{
-    position: relative;
+
     width: 100%;
+    margin-bottom: 50px;
+    // padding-left: 50px;
     @include from(600){
-        width: 30%;
+        width: 40%;
     }
 }
 
+.aboutus-features-info{
+    display: flex;
+    align-items: center;
+
+}
 
 .aboutus-features__img{
-    position: absolute;
-    width: 50px;
+    // position: absolute;
+    left: 0;
+    width: 70px;
     height: auto;
+    padding: 10px;
+    background-color: $orangeColor;
+    border-radius: 10px;
+    
+    // height: auto;
 }
 
 .aboutus-features__title{
-    text-align: center;
+    text-align: left;
+    font-family: $fontBig;
+    font-size: 35px;
+    margin: 0;
+    margin-left: 10px;
+
+}
+.aboutus-features__text{
+    font-family: $fontSmall;
+}
+
+.aboutus-whywe__container{
+    @include from(600){
+        display: flex;
+    }
+}
+
+.aboutus-whywe__description{
+    width: 100%;
+    padding: 0 30px;
+}
+
+
+
+.aboutus-whywe__img{
+    width: 100%;
+    height: auto;
+}
+
+.aboutus-whywe__container{
+    margin-top: 60px;
 }

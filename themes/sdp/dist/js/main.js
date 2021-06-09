@@ -1,29 +1,35 @@
 
 const experitse = document.querySelector('.expertise__element');
+const navExpertise = document.querySelector('.navigation-menu__expertise');
 const megaMenu = document.querySelector('.navigation-menu__mega-menu');
 
-
-
-experitse.addEventListener('mouseenter', hover);
-megaMenu.addEventListener('mouseenter', hover) ;
-
-function hover(){
-    let intViewportWidth = window.innerWidth;
-    if(intViewportWidth > 850){
-
+if(!navExpertise){
+    experitse.addEventListener('mouseenter', hover);
+    megaMenu.addEventListener('mouseenter', hover) ;
+    function hover(){
+        let intViewportWidth = window.innerWidth;
+        if(intViewportWidth > 1000){
+    
+            megaMenu.classList.toggle('navigation-menu__mega-menu--hover');
+        }
+    }
+    
+    experitse.addEventListener('mouseleave', unhover);
+    megaMenu.addEventListener('mouseleave', unhover );
+    
+    function unhover(){
+        let intViewportWidth = window.innerWidth;
+        if(intViewportWidth > 1000){
         megaMenu.classList.toggle('navigation-menu__mega-menu--hover');
+        }
     }
 }
 
-experitse.addEventListener('mouseleave', unhover);
-megaMenu.addEventListener('mouseleave', unhover );
 
-function unhover(){
-    let intViewportWidth = window.innerWidth;
-    if(intViewportWidth > 850){
-    megaMenu.classList.toggle('navigation-menu__mega-menu--hover');
-    }
-}
+
+
+
+
 
 
 

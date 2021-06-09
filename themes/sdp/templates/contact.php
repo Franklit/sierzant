@@ -24,7 +24,7 @@ get_header();
 <?php endif; ?>
 
 
-<section class="contact g-container">
+<section class="contact ">
     <div class="contact__container">
             <?php if($contacHeading):?>
                 <h2 class="contact__heading"><?php echo esc_html($contacHeading);?> </h2>

@@ -19,8 +19,8 @@ $img_about = get_field('field_60ad1adb09ab6');
 
 
 
-<?php get_template_part('template-parts/about/about-features');?>
 <?php get_template_part('template-parts/about/about-whywe');?>
+<?php get_template_part('template-parts/about/about-features');?>
 
 
 
