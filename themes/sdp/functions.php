@@ -75,17 +75,40 @@ add_action('widgets_init', 'my_sidebars');
 
 if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
+	$parent = acf_add_options_page(array(
+		// 'page_title' 	=> 'Theme General Settings',
+		// 'menu_title'	=> 'Theme Settings',
+		// 'menu_slug' 	=> 'theme-general-settings',
+		// 'capability'	=> 'edit_posts',
+		// 'redirect'		=> false
+        'page_title' => esc_html__( 'Theme options', 'adwars' ),
+        'menu_title' => esc_html__( 'Theme options', 'adwars' ),
+        'redirect'   => esc_html__( 'Theme options', 'adwars' )
 	));
-	
 
+    foreach ([ 'en', 'de'] as $lang) {
+
+        acf_add_options_sub_page([
+            'page_title' => sprintf(
+                // translators: %s: Language code (for example EN).
+                esc_html__( 'Global ( %s )' ),
+                strtoupper( $lang )
+              ),
+              'menu_title' => sprintf(
+                // translators: %s: Language code (for example EN).
+                esc_html__( 'Global ( %s )' ),
+                strtoupper( $lang )
+              ),
+              'menu_slug'  => "sdp-${lang}-sm",
+            'post_id' => $lang,
+            'parent'     => $parent['menu_slug']
+        ]);
+    
+    }
 
 }
+
+
 
 
 include 'breadcrumbs.php';

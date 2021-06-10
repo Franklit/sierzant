@@ -15,9 +15,10 @@
         $linkButtonAboveFooterContact = get_field('field_60b2153586dfc');
 
         $logoFooter= get_field('field_60b89a6d93cd6', 'option');
-        $allrights = get_field('field_60b89a7c93cd7', 'option');
+        $allrights = get_field('field_60b89a7c93cd7', pll_current_language());
 
-
+        $privacyPolicy = get_field('field_60c225906ad51', pll_current_language());
+        $privacyPolicyLink = get_field('field_60c225a06ad52', 'option');
 
     ?>
     
@@ -75,6 +76,10 @@
             <?php if($allrights):?>
                 <p class="footer__allrights"><?php echo esc_html($allrights)?></p>
             <?php endif;?>
+            <?php if($privacyPolicy):?>
+                <a href="<?php echo esc_url($privacyPolicyLink['url']); ?>" class=" footer__privacypolicy"><?php echo esc_html($privacyPolicy)?></a>
+            <?php endif;?>
+
             </div>
     </footer>
     </div>

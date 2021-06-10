@@ -29,6 +29,7 @@ footer{
     transform: translate(-50%, -50%);
     left: 50%;
     z-index: 100;
+    z-index: 12;
     
 
     @include from(600){
@@ -54,14 +55,29 @@ footer{
 }
 
 .footer_img{
-    width: 270px;
-    margin-left: 80px;
+    width: 130px;
+    // margin-left: 80px;
     height: auto;
 }
 
 .footer__bottom{
     display: flex;
     align-items: center;
+    padding: 0 110px;
+    justify-content: space-between;
+
+    @include to(800){
+        flex-direction: column;
+        padding: 20px 20px;
+        text-align: center;
+    }
+}
+
+.footer__privacypolicy{
+    color: white;
+    &:hover{
+        color: $orangeColor;
+    }
 }
 
 .footer__allrights{

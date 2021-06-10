@@ -9,7 +9,7 @@ $logoHeader = get_field('field_60b89a3893cd3', 'option')
 
 <div class="site-container">
 
-
+<ul><?php pll_the_languages(); ?></ul>
 
 <header class="site-header">
         <a href="<?php echo home_url();?>">

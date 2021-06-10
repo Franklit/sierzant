@@ -34,6 +34,8 @@ class wpb_widget extends WP_Widget {
                     'taxonomy' => 'specialty_tax',
                     'field' => 'slug',
                     'terms' => $custom_term->slug,
+                    // 'lang' => 'en-GB',
+
                 ),
             ),
         );
