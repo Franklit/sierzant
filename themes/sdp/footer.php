@@ -1,24 +1,24 @@
 
     <?php 
-        $number = get_field('field_60afcef77e883', 'option');
-        $mail = get_field('field_60afcf0c7e884', 'option');
-        $adres = get_field('field_60afcf127e885', 'option');
+        $number = get_field('field_60afcef77e883', pll_current_language());
+        $mail = get_field('field_60afcf0c7e884', pll_current_language());
+        $adres = get_field('field_60afcf127e885', pll_current_language());
 
-        $headingAboveFooter = get_field('field_60b21155e83c3', 'option');
-        $textAboveFooter = get_field('field_60b2116fe83c4', 'option');
-        $textButtonAboveFooter = get_field('field_60b21175e83c5', 'option');
-        $linkButtonAboveFooter = get_field('field_60b21400fcce7', 'option');
+        $headingAboveFooter = get_field('field_60b21155e83c3', pll_current_language());
+        $textAboveFooter = get_field('field_60b2116fe83c4', pll_current_language());
+        $textButtonAboveFooter = get_field('field_60b21175e83c5', pll_current_language());
+        $linkButtonAboveFooter = get_field('field_60b21400fcce7', pll_current_language());
 
         $headingAboveFooterContact = get_field('field_60b214a8fd760');
         $textAboveFooterContact = get_field('field_60b215a869d45');
         $textButtonAboveFooterContact = get_field('field_60b2150efd762');
         $linkButtonAboveFooterContact = get_field('field_60b2153586dfc');
 
-        $logoFooter= get_field('field_60b89a6d93cd6', 'option');
+        $logoFooter= get_field('field_60b89a6d93cd6', pll_current_language());
         $allrights = get_field('field_60b89a7c93cd7', pll_current_language());
 
         $privacyPolicy = get_field('field_60c225906ad51', pll_current_language());
-        $privacyPolicyLink = get_field('field_60c225a06ad52', 'option');
+        $privacyPolicyLink = get_field('field_60c225a06ad52', pll_current_language());
 
     ?>
     
@@ -52,10 +52,14 @@
             <div class="footer__top">
                 <div class="footer__informations">
                     <?php if($number):?>
-                        <p class="footer__number"><?php echo esc_html($number); ?></p>
+                        <a href="tel:<?php echo esc_html($number);?>">
+                            <p class="footer__number"><?php echo esc_html($number); ?></p>
+                        </a>
                     <?php endif;?>
                     <?php if($mail):?>
-                        <p class="footer__mail"><?php echo esc_html($mail); ?></p>
+                        <a href="mailto:<?php echo esc_html($mail); ?>">
+                            <p class="footer__mail"><?php echo esc_html($mail); ?></p>
+                        </a>
                     <?php endif;?>
                     <?php if($adres):?>
                         <div class="footer__adress">

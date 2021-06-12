@@ -26,15 +26,58 @@ footer{
 .footer__informations{
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
+    transform: translateY( -50%);
+    // left: 50%;
     z-index: 100;
     z-index: 12;
+    width: 200px;
+    a{
+        color: white;
+        transition: .2s ease-in-out ;
+
+        &:hover{
+            color: $orangeColor;
+        }
+    }
     
 
     @include from(600){
         position: relative;
         margin-left: 150px;
+    }
+}
+
+.footer__number, .footer__mail{
+    padding-left: 40px;
+    position: relative;
+    
+    &::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        // display: none;
+        background-size: 20px 20px;
+        background-color: $orangeColor;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 999px;
+    }
+
+}
+
+.footer__number{
+    &::before{
+        background-image: url('../../template-parts/svg/smartphone.svg');
+    }
+}
+.footer__mail{
+    &::before{
+        background-image: url('../../template-parts/svg/envelope.svg');
     }
 }
 

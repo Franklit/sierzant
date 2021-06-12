@@ -3,15 +3,11 @@ $personName = get_field('field_60ad205e8f0bd');
 $personSurname = get_field('field_60b28b30e29ed');
 $personPosition = get_field('field_60ad206c8f0be');
 $personImage = get_field('field_60ad20728f0bf');
-
 $personRepeater = 'field_60ad20878f0c0';
-
 $workHeighlightTitle = get_field('field_60b3537857c9f');
 $workList = 'field_60b3538957ca0';
-
 $linkedin= get_field('field_60b391d8f5ec6');
 $mail = get_field('field_60b392eaf5ec7');
-
 $workIcon = get_field('field_60bc940dce76b');
 ?>
 
@@ -67,10 +63,7 @@ $workIcon = get_field('field_60bc940dce76b');
                             <?php if($personDescription):?>
                                 <p class="person__title-description"><?php echo $personDescription;?></p>
                             <?php endif;?>
-                           
                         </div>
-
-                
                     <?php endwhile;?>
                 
             </div>
@@ -91,10 +84,8 @@ $workIcon = get_field('field_60bc940dce76b');
                 <?php while(have_rows($workList)): the_row();?>
                     <?php $listItem = get_sub_field('field_60b353ef57ca1');?>
                     <li class="person__work-listitem"><?php echo $listItem; ?></li>
-
                 <?php endwhile;?>
             </ul>
-
         <?php endif;?>
     </div>
 

@@ -66,6 +66,9 @@ get_header();
                     <?php if(get_previous_post_link( )):?>
                         <div class="next-specialty__left"><p class="otherpost otherpost--prev">pervious post</p><?php previous_post_link( '%link' ) ?></div>
                     <?php endif;?>
+                    <?php if(!get_previous_post_link( )):?>
+                        <div class="empty"></div>
+                    <?php endif;?>
                     <?php if(get_next_post_link()):?>
                         <div class="next-specialty__right"><p class="otherpost otherpost--next">next post</p><?php next_post_link( '%link ' ) ?></div>
                     <?php endif;?>

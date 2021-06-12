@@ -21,3 +21,17 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+
+# wordpress specific
+wp-config.php
+wp-content/debug.log
+wp-content/languages/
+wp-content/ai1wm-backups/
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
