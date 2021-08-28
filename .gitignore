@@ -26,7 +26,7 @@ node_modules/
 wp-config.php
 wp-content/debug.log
 wp-content/languages/
-wp-content/ai1wm-backups/
+ai1wm-backups/
 wp-content/uploads/
 wp-content/blogs.dir/
 wp-content/upgrade/*
